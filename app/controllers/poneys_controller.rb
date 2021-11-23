@@ -1,0 +1,2 @@
+class PoneysController < ApplicationController
+end
