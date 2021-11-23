@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   end
   patch "bookings/:id/accept", to: "bookings#accept"
   patch "bookings/:id/decline", to: "bookings#decline"
-  get "mybookings", to: "bookings#my_bookings"
+  get "mybookings", to: "bookings#mybookings"
   delete "bookings/:id", to: "bookings#destroy"
-  get "myponeys", to: "poneys#my_poneys"
+  get "myponies", to: "poneys#myponies"
   get "user/signin", to: "user#signin"
   get "user/signin", to: "user#login"
   get "user/signup", to: "user#signup"
