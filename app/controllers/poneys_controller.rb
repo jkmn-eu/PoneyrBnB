@@ -16,7 +16,13 @@ class PoneysController < ApplicationController
   end
 
   def create
-
+    @poney = Poney.new(poney_params)
+    @poney.user_id = current_user.id
+    if @poney.save
+      redirect_to poney_path(@poney)
+    else
+      render :new
+    end
   end
 
   def update
@@ -38,7 +44,7 @@ class PoneysController < ApplicationController
   end
 
   def poney_params
-    params.require(:poney).permit(:name, :nature, :color, :height, :price_per_diem, :special_power, :profile_pic_url)
+    params.require(:poney).permit(:user_id, :name, :nature, :color, :height, :price_per_diem, :special_power, :profile_pic_url)
 
   end
 end
