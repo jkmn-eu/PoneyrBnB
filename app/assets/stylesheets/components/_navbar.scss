@@ -1,10 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background:#ffafcc;
+  background:#fad2e1;
   font-family: 'Qwigley', cursive;
-  font-size: 30px;
-
+  font-size: 40px;
   padding: 6px;
+  color:#5e60ce;
+  text-shadow: 2px 1px 2px white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -18,4 +19,22 @@
 
 .dropdown-item {
   font-size: 20px;
+}
+.dropdown-button{
+  padding: 8px;
+  font-size: 40px;
+  color: #00afb9;
+  margin: 30px;
+}
+
+.dropdown-button:hover{
+  color:#bee1e6;
+}
+
+.title{
+  font-family: 'Qwigley', cursive;
+  font-size: 61px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 6px 21px black;
 }
