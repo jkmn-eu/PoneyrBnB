@@ -6,3 +6,12 @@
 
 <p><%= @poney.description %></p>
 <img src=<%= @poney.profile_pic_url %> alt="">
+
+
+<%# here is a button that allows a user who is
+NOT the poney's owner to book it and a poney's owner to edit the said poney%>
+<% if current_user.id != @poney.user_id %>
+  <%= link_to "Book this poney",  new_poney_booking_path(@poney) %>
+<% else %>
+  <%= link_to "Edit this poney",  edit_poney_path(@poney) %>
+<% end %>
