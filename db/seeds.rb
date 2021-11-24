@@ -23,7 +23,8 @@ puts 'Database successfully destroyed !'
 ju = User.create!(
   {
     email: 'jkmn@protonmail.com',
-    password: 'azerty1234'
+    password: 'azerty1234',
+    address: '76 avenue du Général de Gaulle, 92250 La Garenne-Colombes'
   }
 )
 puts "User ju was created with email #{ju.email} and password #{ju.encrypted_password}"
@@ -31,14 +32,16 @@ puts "User ju was created with email #{ju.email} and password #{ju.encrypted_pas
 mat = User.create!(
   {
     email: 'matth.duperrey@gmail.com',
-    password: 'azerty1234'
+    password: 'azerty1234',
+    address: '9 rue Saint-Sébastien, 75011 Paris'
   }
 )
 puts "User ju was created with email #{mat.email} and password #{mat.encrypted_password}"
 kate = User.create!(
   {
     email: 'cailleret.catherine00@gmail.com',
-    password: 'azerty1234'
+    password: 'azerty1234',
+    address: '11 rue Albert Legrand, 62620 Barlin'
   }
 )
 puts "User ju was created with email #{kate.email} and password #{kate.encrypted_password}"
