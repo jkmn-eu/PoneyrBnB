@@ -1,0 +1,13 @@
+<h1>This is the reservation's page for <%= @poney.name %></h1>
+
+<% if @user.id != @poney.user_id %>
+  <p>Here is the poney's location : <%= @owner.address %></p>
+  <%# maybe we can add a map here and show the shortest itinerary from user's address to its booking's location %>
+
+  <p>- <%= @poney.nature %></p>
+  <p>- <%= @poney.special_power %></p>
+
+  <p>Do you want to confirm your booking ?</p>
+   <%= link_to "Confirm", booking_create  %>
+  <p></p>
+<% end %>

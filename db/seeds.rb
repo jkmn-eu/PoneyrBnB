@@ -45,7 +45,7 @@ puts "User ju was created with email #{kate.email} and password #{kate.encrypted
 
 puts "Creating 6 fake ponies for ju"
 6.times do
-  poney = Poney.new(
+  Poney.new(
     {
       user_id: 1,
       name: Faker::Creature::Horse.name,
@@ -61,7 +61,7 @@ end
 
 puts "Creating 6 fake ponies for mat"
 6.times do
-  poney = Poney.new(
+  Poney.new(
     {
       user_id: 2,
       name: Faker::Creature::Horse.name,
@@ -77,7 +77,7 @@ end
 
 puts "Creating 6 fake ponies for kate"
 6.times do
-  poney = Poney.new(
+  Poney.new(
     {
       user_id: 3,
       name: Faker::Creature::Horse.name,
