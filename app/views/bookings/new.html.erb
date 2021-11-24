@@ -8,6 +8,8 @@
   <p>- <%= @poney.special_power %></p>
 
   <p>Do you want to confirm your booking ?</p>
-   <%= link_to "Confirm", booking_create  %>
+    <%= simple_form_for @booking do |f| %>
+      <%= f.button :submit, 'Confirm' %>
+    <% end %>
   <p></p>
 <% end %>
