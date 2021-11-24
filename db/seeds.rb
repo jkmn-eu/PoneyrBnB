@@ -45,7 +45,7 @@ kate = User.create!(
   }
 )
 puts "User ju was created with email #{kate.email} and password #{kate.encrypted_password}"
-
+natures = ['gentil', 'joli', 'éclaté']
 puts "Creating 6 fake ponies for ju"
 6.times do
   Poney.new(
@@ -55,9 +55,10 @@ puts "Creating 6 fake ponies for ju"
       color: Faker::Color.color_name,
       description: Faker::Lorem.sentence,
       special_power: Faker::Lorem.sentence,
-      nature: Faker::Lorem.sentence,
+      nature: natures.sample,
       price_per_diem: Faker::Number.decimal(l_digits: 2),
-      height: Faker::Number.decimal_part(digits: 2)
+      height: Faker::Number.decimal_part(digits: 2),
+      profile_pic_url: Faker::LoremFlickr.image(size: "250x250", search_terms: ['poney'])
     }
   ).save!
 end
@@ -71,9 +72,10 @@ puts "Creating 6 fake ponies for mat"
       color: Faker::Color.color_name,
       description: Faker::Lorem.sentence,
       special_power: Faker::Lorem.sentence,
-      nature: Faker::Lorem.sentence,
+      nature: natures.sample,
       price_per_diem: Faker::Number.decimal(l_digits: 2),
-      height: Faker::Number.decimal_part(digits: 2)
+      height: Faker::Number.decimal_part(digits: 2),
+      profile_pic_url: Faker::LoremFlickr.image(size: "250x250", search_terms: ['poney'])
     }
   ).save!
 end
@@ -87,9 +89,10 @@ puts "Creating 6 fake ponies for kate"
       color: Faker::Color.color_name,
       description: Faker::Lorem.sentence,
       special_power: Faker::Lorem.sentence,
-      nature: Faker::Lorem.sentence,
+      nature: natures.sample,
       price_per_diem: Faker::Number.decimal(l_digits: 2),
-      height: Faker::Number.decimal_part(digits: 2)
+      height: Faker::Number.decimal_part(digits: 2),
+      profile_pic_url: Faker::LoremFlickr.image(size: "250x250", search_terms: ['poney'])
     }
   ).save!
 end
