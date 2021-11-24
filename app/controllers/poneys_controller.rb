@@ -33,6 +33,10 @@ class PoneysController < ApplicationController
     end
   end
 
+  def myponies
+    @myponies = Poney.where(user_id: current_user.id)
+  end
+
   def destroy
     @poney.destroy
   end

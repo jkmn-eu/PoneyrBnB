@@ -1,1 +1,7 @@
 <h1>Here are all the ponies you own :</h1>
+
+<ul>
+  <% @myponies.each do |p| %>
+    <li><%= p.name %>, <%= p.color %></li>
+    <% end %>
+</ul>
