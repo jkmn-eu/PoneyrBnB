@@ -21,11 +21,12 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
-  <%= render 'shared/navbar' %>
-  <%= render 'shared/banner' %>
-  <%= render 'shared/searchbar' %>
-    <div class="container">
+  <body >
+  <%= render 'shared/navbar'%>
+  <% if current_page?(root_path) %>
+    <%= render 'shared/banner' %>
+  <% end %>
+    <div class="container" class ="background">
       <%= yield %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>

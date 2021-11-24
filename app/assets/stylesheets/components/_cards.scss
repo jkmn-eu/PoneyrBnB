@@ -10,21 +10,24 @@
   font-weight: bold;
   text-shadow: 2px 3px 3px #64dfdf;
   border-radius: 25px;
-  box-shadow: 0 0 15px #64dfdf;
+  box-shadow: 0 0 15px #892b64;
 }
 
 #joli-poney{
   background-image: asset-url('joliponey.jpeg');
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),asset-url('joliponey.jpeg');
   background-size: cover;
 }
 
 #gentils-poney{
   background-image: asset-url('gentilsponey.jpeg');
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),asset-url('gentilsponey.jpeg');
   background-size: cover;
 }
 
 #poney-eclate{
   background-image: asset-url('poneyeclate.jpeg');
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),asset-url('poneyeclate.jpeg');
   background-size: cover;
 }
 
