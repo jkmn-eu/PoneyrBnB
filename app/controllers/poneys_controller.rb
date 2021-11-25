@@ -2,7 +2,7 @@ class PoneysController < ApplicationController
   before_action :find_poney, only: [:show, :edit, :update, :destroy]
 
   def index
-    @poney = Poney.all
+    @poneys = Poney.all
   end
 
   def new

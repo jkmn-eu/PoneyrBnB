@@ -1,0 +1,9 @@
+<h1>Welcome to PoneyrBnb !</h1>
+
+<h3>Here are all our best ponies 🐴</h3>
+
+<ul>
+  <% @poneys.each do |p| %>
+    <li><%= p.name %> / <%= p.price_per_diem %></li>
+  <% end %>
+</ul>

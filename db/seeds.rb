@@ -10,13 +10,13 @@ require 'faker'
 
 puts 'Destroying database if we are in test environment'
 puts "Killing ponies... :'( "
-Poney.destroy_all if Rails.env.development?
+Poney.destroy_all
 puts 'Poneys successfully killed. YOU MONSTER !'
 puts "Deleting users..."
-User.destroy_all if Rails.env.development?
+User.destroy_all
 puts 'Users successfully destroyed !'
 puts "Destroying bookings"
-Booking.destroy_all if Rails.env.development?
+Booking.destroy_all
 puts 'All bookings were erased.'
 puts 'Database successfully destroyed !'
 
