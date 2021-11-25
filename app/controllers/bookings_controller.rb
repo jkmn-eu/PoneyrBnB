@@ -29,7 +29,8 @@ class BookingsController < ApplicationController
     redirect_to booking_path
   end
 
-  def my_bookings
-    @bookings = Booking.all
-  end
+  #def mybookings
+    #@user = current_user
+    #@bookings = Booking.where(user_id: @user.id)
+  #end
 end
