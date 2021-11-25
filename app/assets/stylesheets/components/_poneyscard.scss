@@ -1,11 +1,31 @@
 .poney-card{
+  display: flex;
   height: 170px;
-  box-shadow: 1px 1px 3px #004e98 ;
-  background-color: #fde2e4;
+  box-shadow: 2px 5px 11px #adb5bd ;
+  background-color: #f2f0f5;
   margin: 12px;
   padding: 12px;
-  position:relative;
+  justify-content: space-between;
 }
+
+.poney-cards{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: 'Courier';
+  justify-content: space-between;
+}
+
+@media(max-width: 992px) {
+  .poney-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width: 768px) {
+  .poney-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .poney-title{
   color:whitesmoke;
@@ -20,24 +40,24 @@
   padding:20px;
 }
 
-.poney-cards{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  font-family: 'Courier';
-  justify-content: space-between;
-}
-
 .poney-list{
   font-family: "Courier";
   margin:40px;
   text-align: center;
+  padding: 13px;
+  font-size: 33px;
 }
 
 .poney-card-img{
-  position:absolute;
-  top: 65px; left: 242px;
-  width: 100px;
-  height: 100px;
+  top: 3px; left: 435px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   box-shadow: 1px 2px 4px black;
+}
+
+.poney-description-title{
+  margin:5px;
+  padding-top:6px;
+  font-size: 14px;
 }
