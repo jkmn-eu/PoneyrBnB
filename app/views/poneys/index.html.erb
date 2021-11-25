@@ -1,15 +1,20 @@
-<div>
-  <h1>Welcome to PoneyrBnb !</h1>
+<div >
+  <h1 class="poney-title">✨Welcome to PoneyrBnb !✨</h1>
 </div>
 
-<div>
- <h3>Here are all our best ponies 🐴</h3>
+<div >
+ <h3 class=poney-list>Here are all our best ponies 🐴</h3>
 </div>
 
-<ul>
+
+
+<div class="poney-cards">
   <% @poneys.each do |p| %>
-    <li>
-      <%= link_to "#{p.name} / #{p.price_per_diem}", poney_path(p) %>
-    </li>
-  <% end %>
-</ul>
+    <div class="poney-card">
+      <%= p.name %> <%= p.price_per_diem %>EUR/JOUR
+      <%= image_tag p.profile_pic_url, class: "poney-card-img"%>
+    </div>
+      <% end %>
+
+</div>
+
