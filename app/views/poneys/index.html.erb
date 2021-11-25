@@ -4,6 +4,8 @@
 
 <ul>
   <% @poneys.each do |p| %>
-    <li><%= p.name %> / <%= p.price_per_diem %></li>
+    <li>
+      <%= link_to "#{p.name} / #{p.price_per_diem}", poney_path(p) %>
+    </li>
   <% end %>
 </ul>
