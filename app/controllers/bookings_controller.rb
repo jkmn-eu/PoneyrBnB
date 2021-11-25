@@ -11,8 +11,8 @@ class BookingsController < ApplicationController
     @poney = Poney.find(params[:poney_id])
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
-    @booking.status = 'pending'
     if @booking.save
+      @booking.status = 'pending'
       redirect_to mybookings_path
     else
       render :new
@@ -24,11 +24,13 @@ class BookingsController < ApplicationController
   end
 
   def accept
-
+    @booking = Booking.find(Poney.find(params[:id]).user_id)
+    @booking.status = "accepted"
   end
 
   def decline
-
+    @booking = Booking.find(Poney.find(params[:id]).user_id)
+    @booking.status = "declined"
   end
 
   def destroy
