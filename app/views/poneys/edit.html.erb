@@ -1,4 +1,4 @@
-<h1>Modifie moi ce poneeey si il te dépleeey...</h1>
+<p class="indiv-card-title"> Modifie moi ce poneeey s'il te dépleeey...</p>
 
 <%= simple_form_for @poney, :url => poney_path, method: :patch do |f| %>
   <%= f.input :name, label: 'Your poney name please', placeholder: 'Please name your cutty poney' %>
@@ -9,5 +9,5 @@
   <%= f.input :description, label: 'please describe the poney' %>
   <%= f.input :special_power, label: 'Special power' %>
   <%= f.input :photo, as: :file, label: "Poney's pic URL" %>
-  <%= f.button :submit %>
+  <div class="btn-individual btn-flat"><%= f.button :submit %></div>
 <% end %>
