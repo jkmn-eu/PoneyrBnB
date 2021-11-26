@@ -6,12 +6,11 @@
 
     <div class="indiv-card-text">
       <p>🐴 <%= @poney.name %> is a <%= @poney.nature %> poney.</p>
-
+      <p><%= @poney.description %></p>
       <p>📏 It is <%= @poney.height %> feet tall.</p>
 
 
-<p><%= @poney.description %></p>
-<img src=<%= @poney.profile_pic_url%>  alt="">
+
 <%= cl_image_tag(@poney.photo.key, alt: "Some picture", height: 300, width: 400) %>
 
 
