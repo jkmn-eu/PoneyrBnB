@@ -1,6 +1,7 @@
 class Poney < ApplicationRecord
   belongs_to :user
   has_many :bookings
+  has_one_attached :photo
 
   validates :name, presence: true
   validates :name, length: { minimum: 2, maximum: 20, too_long: "20 characters is the maximum allowed" }
