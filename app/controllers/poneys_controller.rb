@@ -48,7 +48,6 @@ class PoneysController < ApplicationController
   end
 
   def poney_params
-    params.require(:poney).permit(:user_id, :name, :nature, :color, :height, :price_per_diem, :special_power, :photo)
-
+    params.require(:poney).permit(:description, :user_id, :name, :nature, :color, :height, :price_per_diem, :special_power, :photo)
   end
 end
