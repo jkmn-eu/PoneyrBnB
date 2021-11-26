@@ -1,8 +1,14 @@
-<h1><%= @poney.name %></h1>
+<div class ="individual-card">
+  <div>
+    <div class="indiv-card-title">
+      <p><%= @poney.name %></p>
+    </div>
 
-<p><%= @poney.name %> is a <%= @poney.nature %> poney.</p>
+    <div class="indiv-card-text">
+      <p>🐴 <%= @poney.name %> is a <%= @poney.nature %> poney.</p>
 
-<p>It is <%= @poney.height %> feet tall.</p>
+      <p>📏 It is <%= @poney.height %> feet tall.</p>
+
 
 <p><%= @poney.description %></p>
 <img src=<%= @poney.profile_pic_url alt="">
@@ -15,3 +21,23 @@
 <% else %>
   <%= link_to "Edit this poney",  edit_poney_path(@poney) %>
 <% end %>
+           <p>🤔 <%= @poney.description %></p>
+    </div>
+  </div>
+
+
+  <%# here is a button that allows a user who is
+  NOT the poney's owner to book it and a poney's owner to edit the said poney%>
+  <div>
+    <img src=<%= @poney.profile_pic_url %> alt="" class="individual-card-img">
+    <div class="btn-individual btn-flat">
+      <% if current_user.id != @poney.user_id %>
+        <%= link_to "Book this poney",  new_poney_booking_path(@poney) %>
+      <% else %>
+        <%= link_to "Edit this poney",  edit_poney_path(@poney) %>
+      <% end %>
+  </div>
+  </div>
+
+
+</div>
