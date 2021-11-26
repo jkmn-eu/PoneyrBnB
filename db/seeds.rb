@@ -29,7 +29,7 @@ ju = User.new(
     address: '76 avenue du Général de Gaulle, 92250 La Garenne-Colombes'
   }
 )
-ju.photo.attach(io: ju_profil_photo, filename: 'ju.jpg', content: 'image/jpg')
+ju.photo.attach(io: ju_profil_photo, filename: 'ju.jpg', content_type: 'image/jpg')
 ju.save!
 
 puts "User ju was created with email #{ju.email} and password #{ju.encrypted_password}"
@@ -43,7 +43,7 @@ mat = User.new(
   }
 
 )
-mat.photo.attach(io: mat_profil_photo, filename: 'mat.jpg', content: 'image/jpg')
+mat.photo.attach(io: mat_profil_photo, filename: 'mat.jpg', content_type: 'image/jpg')
 mat.save!
 
 puts "User ju was created with email #{mat.email} and password #{mat.encrypted_password}"
@@ -57,7 +57,7 @@ kate = User.new(
     address: '11 rue Albert Legrand, 62620 Barlin'
   }
 )
-kate.photo.attach(io: kate_profil_photo, filename: 'kate.jpg', content: 'image/jpg')
+kate.photo.attach(io: kate_profil_photo, filename: 'kate.jpg', content_type: 'image/jpg')
 
 puts "User ju was created with email #{kate.email} and password #{kate.encrypted_password}"
 
@@ -66,7 +66,7 @@ puts "Creating 6 fake ponies for ju"
 6.times do
   Poney.new(
     {
-      user_id: 1,
+      user: ju,
       name: Faker::Creature::Horse.name,
       color: Faker::Color.color_name,
       description: Faker::Lorem.sentence,
@@ -83,7 +83,7 @@ puts "Creating 6 fake ponies for mat"
 6.times do
   Poney.new(
     {
-      user_id: 2,
+      user: mat,
       name: Faker::Creature::Horse.name,
       color: Faker::Color.color_name,
       description: Faker::Lorem.sentence,
@@ -100,7 +100,7 @@ puts "Creating 6 fake ponies for kate"
 6.times do
   Poney.new(
     {
-      user_id: 3,
+      user: kate,
       name: Faker::Creature::Horse.name,
       color: Faker::Color.color_name,
       description: Faker::Lorem.sentence,
