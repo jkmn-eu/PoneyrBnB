@@ -1,15 +1,20 @@
-<h1>This is the reservation's page for <%= @poney.name %></h1>
+<p class="poney-list">This is the reservation's page for ✨ <%= @poney.name %> ✨ </p>
 
-<% if @user.id != @poney.user_id %>
-  <p>Here is the poney's location : <%= @owner.address %></p>
-  <%# maybe we can add a map here and show the shortest itinerary from user's address to its booking's location %>
-
-  <p>- <%= @poney.nature %></p>
-  <p>- <%= @poney.special_power %></p>
-
-  <p>Do you want to confirm your booking ?</p>
-    <%= simple_form_for @booking, :url => poney_bookings_path  do |f| %>
-      <%= f.button :submit, 'Confirm' %>
-    <% end %>
-  <p></p>
-<% end %>
+<div class="reservation-box indiv-card-text">
+  <% if @user.id != @poney.user_id %>
+    <p>📍<strong> Poney's location :</strong> <%= @owner.address %></p>
+    <%# maybe we can add a map here and show the shortest itinerary from user's address to its booking's location %>
+  <div class="indiv-card-text">
+    <p>🐴 <strong> Poney type:</strong> <%= @poney.nature.capitalize %></p>
+    <p>✨<strong> SuperPower:</strong> <%= @poney.special_power.capitalize %></p>
+  </div>
+</div>
+  <div class="confirm-booking">
+    <p><strong> Do you want to confirm your booking ?</strong></p>
+      <%= simple_form_for @booking, :url => poney_bookings_path  do |f| %>
+        <div class="btn-individual btn-flat"><%= f.button :submit, 'Confirm' %></div>
+      <% end %>
+    <p></p>
+  <% end %>
+  </div>
+</div>
