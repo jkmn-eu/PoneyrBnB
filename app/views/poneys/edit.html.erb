@@ -1,13 +1,13 @@
-<h1>Bienvenue sur le form de création de poniiiiiies</h1>
+<h1>Modifie moi ce poneeey si il te dépleeey...</h1>
 
-<%= simple_form_for @poney, method: :post do |f| %>
-  <%= f.input :name, label: 'Your poney name please', error: 'Name is mandatory, please specify one' %>
+<%= simple_form_for @poney, :url => poney_path, method: :patch do |f| %>
+  <%= f.input :name, label: 'Your poney name please', placeholder: 'Please name your cutty poney' %>
   <%= f.input :nature, collection: ['gentil', 'joli', 'éclaté'], include_blank: false %>
   <%= f.input :color, placeholder: 'poney color please' %>
   <%= f.input :price_per_diem, placeholder: 'A number please for rate per day' %>
   <%= f.input :height, placeholder: 'how big is this tiny horse ?' %>
   <%= f.input :description, label: 'please describe the poney' %>
   <%= f.input :special_power, label: 'Special power' %>
-  <%= f.input :photo, as: :file label: "Poney's pic URL" %>
+  <%= f.input :profile_pic_url, label: "Poney's pic URL" %>
   <%= f.button :submit %>
 <% end %>

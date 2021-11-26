@@ -1,0 +1,23 @@
+<div >
+  <h1 class="poney-title">✨Welcome to PoneyrBnb !✨</h1>
+</div>
+
+<div >
+ <h3 class=poney-list>Here are all our best ponies 🐴</h3>
+</div>
+
+
+
+<div class="poney-cards">
+  <% @poneys.each do |p| %>
+    <div class="poney-card">
+      <div>
+        <div class="poney-description-title">📇 <strong> Petit nom:</strong> <%= p.name%></div>
+        <div class="poney-description-title">📝 <strong> Description:</strong><%= p.description %></div>
+        <div class="poney-description-title">🌟 <strong> SuperPower:</strong><%= p.special_power %></div>
+        <div class="poney-description-title">💰 <strong>Combien pour cette bôté? (EUR/Jour)</strong>  <%= p.price_per_diem %></div>
+      </div>
+      <%= image_tag p.profile_pic_url, class: "poney-card-img"%>
+    </div>
+      <% end %>
+</div>

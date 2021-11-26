@@ -1,5 +1,19 @@
 <div class="reservation-card">
   <div>
-    <%= image_tag "poneyquirit.jpeg", alt: "Un poney", class: "reservation-card-img"%>
+    <%= image_tag "#{Poney.find(reservationcard.poney_id).profile_pic_url}", alt: "Un poney", class: "reservation-card-img"%>  </div>
+  <div class="reservation-card-title">
+    <p>Your reservation with </p>
+    <p>✨🌟 <%= Poney.find(reservationcard.poney_id).name %> 🌟✨</p>
+  </div>
+  <div class="reservation-card-txt">
+  <ul>
+    <li>The owner's email : <%= User.find(Poney.find(reservationcard.poney_id).user_id).email %></li>
+    <li>Start Date: tbd</li>
+    <li>End Date: tbd</li>
+  </ul>
+  </div>
+  <div class="reservation-card-title">
+    <p>Have fun, and don't forget to bring  </p>
+    <p>✨🌟 <%= Poney.find(reservationcard.poney_id).name %> 🌟✨ back !</p>
   </div>
 </div>

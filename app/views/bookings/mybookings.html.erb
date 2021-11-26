@@ -1,0 +1,9 @@
+<h1>My bookings :</h1>
+
+
+<h2>As a booker :</h2>
+<%= render partial: 'shared/reservationasbooker', collection: @reservations_as_booker %>
+
+
+<h2>As an owner :</h2>
+<%= render partial: 'shared/reservationasowner', collection: @reservations_as_owner %>

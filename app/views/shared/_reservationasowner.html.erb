@@ -1,0 +1,27 @@
+  <%# This is the reservation card as an owner %>
+  <div class="reservation-card">
+
+    <div>
+      <%= image_tag "#{Poney.find(reservationasowner.poney_id).profile_pic_url}", alt: "Un poney", class: "reservation-card-img"%>
+    </div>
+
+    <div class="reservation-card-title">
+      Reservation #<%= "#{reservationasowner.id}" %>
+      <p>This reservation is <%= "#{reservationasowner.status}" %></p>
+    </div>
+
+    <div class="reservation-card-txt">
+      <ul>
+        <li>Booker's email : <%= User.find(Poney.find(reservationasowner.poney_id).user_id).email %></li>
+        <li>Start Date: tbd</li>
+        <li>End Date: tbd</li>
+        <li>Total price: tbd</li>
+      </ul>
+    </div>
+
+    <div>
+      <%= link_to "Accept", accept_path(reservationasowner), method: :patch %>
+      <%= link_to "Decline", decline_path(reservationasowner), method: :patch %>
+    </div>
+
+  </div>

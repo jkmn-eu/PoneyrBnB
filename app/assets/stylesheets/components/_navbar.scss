@@ -1,11 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
   background:#fad2e1;
-  font-family: 'Qwigley', cursive;
-  font-size: 40px;
-  padding: 6px;
-  color:#5e60ce;
-  text-shadow: 2px 1px 2px white;
+  font-family: 'Courier', cursive;
+  font-size: 25px;
+  text-decoration: none;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -37,5 +35,15 @@
   font-weight: bold;
   color: white;
   text-shadow: 2px 6px 21px black;
-  padding-left: 500px;
+}
+
+.nav-word{
+  margin-top: 10px;
+  color:#00afb9;
+  text-shadow: 2px 1px 2px white;
+  text-decoration: none;
+}
+
+.nav-word:hover{
+  text-decoration: none;
 }
