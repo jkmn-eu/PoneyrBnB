@@ -8,6 +8,6 @@
   <%= f.input :height, placeholder: 'how big is this tiny horse ?' %>
   <%= f.input :description, label: 'please describe the poney' %>
   <%= f.input :special_power, label: 'Special power' %>
-  <%= f.input :profile_pic_url, label: "Poney's pic URL" %>
+  <%= f.input :photo, as: :file, label: "Poney's pic URL" %>
   <%= f.button :submit %>
 <% end %>
