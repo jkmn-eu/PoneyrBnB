@@ -29,10 +29,20 @@
         </ul>
       <% end %>
       <% if user_signed_in? %>
-        <a class="nav-word">
-        <a class="nav-word" href="#"><%= link_to "Poneys/", poneys_path %></a>
-          <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+
+        <a class="nav-word" href="#">
+          <%= link_to "Poneys/", poneys_path %>
         </a>
+
+        <div class="dropdown">
+          <img src="https://cdn.pixabay.com/photo/2012/04/18/00/07/silhouette-of-a-man-36181_1280.png" alt="" class="avatar">
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+
       <% end %>
   </div>
 </div>
