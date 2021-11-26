@@ -1,4 +1,4 @@
-<p class="indiv-card-title">Bienvenue sur le form de création de poniiiiiies</p>
+<p class="indiv-card-title">Bienvenue sur le form de création de Pôtit Poney </p>
 
 <%= simple_form_for @poney, method: :post do |f| %>
   <%= f.input :name, label: 'Your poney name please', error: 'Name is mandatory, please specify one' %>
@@ -9,5 +9,5 @@
   <%= f.input :description, label: 'please describe the poney' %>
   <%= f.input :special_power, label: 'Special power' %>
   <%= f.input :photo, as: :file, label: "Choose your poney's picture" %>
-  <%= f.button :submit %>
+  <div class="btn-individual btn-flat"><%= f.button :submit %></div>
 <% end %>
