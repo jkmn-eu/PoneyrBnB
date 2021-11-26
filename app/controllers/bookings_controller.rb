@@ -21,6 +21,7 @@ class BookingsController < ApplicationController
 
   def mybookings
     @reservations = Booking.where(user_id: current_user.id)
+    @reservationasbooker = Booking.where(user_id: current_user.id)
   end
 
   def accept
@@ -43,6 +44,7 @@ class BookingsController < ApplicationController
     #@user = current_user
     #@bookings = Booking.where(user_id: @user.id)
   #end
+
 
   private
 
