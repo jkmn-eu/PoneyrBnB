@@ -1,0 +1,43 @@
+.individual-card{
+  display: flex;
+  justify-content:space-around ;
+  width:100%;
+  box-shadow: 2px 5px 11px #17c3b2 ;
+  margin-top: 70px;
+  background-color: #f8edeb;
+  padding:10px;
+  border: ridge;
+  border-width: 10px;
+  border-color: #1985a1;
+}
+
+.individual-card-img{
+  box-shadow: 1px 2px 4px black;
+  border-radius: 2%;
+  filter: grayscale(56%);
+  margin-right: 30px;
+}
+
+.btn-individual{
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  padding: 10px;
+  font-size: 20px ;
+  width: 100px;
+  margin-left: 78px;
+}
+
+.indiv-card-title{
+  font-family: 'Qwigley', cursive;
+  text-align: center;
+  font-size: 75px;
+  text-shadow: 1px 2px 4px grey;
+  color: #007ea7;
+}
+
+.indiv-card-text{
+  font-family: 'Courier';
+  text-align: left;
+  padding-top:24px;
+}
