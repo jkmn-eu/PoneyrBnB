@@ -56,7 +56,7 @@ puts "Creating 6 fake ponies for ju"
       description: Faker::Lorem.sentence,
       special_power: Faker::Lorem.sentence,
       nature: natures.sample,
-      price_per_diem: Faker::Number.decimal(l_digits: 2),
+      price_per_diem: Faker::Number.number(digits: 2),
       height: Faker::Number.decimal_part(digits: 2),
       profile_pic_url: Faker::LoremFlickr.image(size: "250x250", search_terms: ['poney'])
     }
@@ -73,7 +73,7 @@ puts "Creating 6 fake ponies for mat"
       description: Faker::Lorem.sentence,
       special_power: Faker::Lorem.sentence,
       nature: natures.sample,
-      price_per_diem: Faker::Number.decimal(l_digits: 2),
+      price_per_diem: Faker::Number.number(digits: 2),
       height: Faker::Number.decimal_part(digits: 2),
       profile_pic_url: Faker::LoremFlickr.image(size: "250x250", search_terms: ['poney'])
     }
@@ -90,7 +90,7 @@ puts "Creating 6 fake ponies for kate"
       description: Faker::Lorem.sentence,
       special_power: Faker::Lorem.sentence,
       nature: natures.sample,
-      price_per_diem: Faker::Number.decimal(l_digits: 2),
+      price_per_diem: Faker::Number.number(digits: 2),
       height: Faker::Number.decimal_part(digits: 2),
       profile_pic_url: Faker::LoremFlickr.image(size: "250x250", search_terms: ['poney'])
     }
