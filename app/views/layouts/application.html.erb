@@ -30,7 +30,7 @@
   <% if current_page?(root_path) %>
     <%= render 'shared/banner' %>
   <% end %>
-    <div class="container" class ="background">
+    <div class="container" class ="background" style="display:flex, flex-direction:column;">
       <%= yield %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>

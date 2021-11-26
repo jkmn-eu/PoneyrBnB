@@ -23,8 +23,8 @@ class Poney < ApplicationRecord
   validates :special_power, presence: true
   validates :special_power, length: { maximum: 50 }
 
-  validates :description, presence: true
-  validates :description, length: { maximum: 50 }
+  #validates :description, presence: true
+  #validates :description, length: { maximum: 50 }
 
 
 end

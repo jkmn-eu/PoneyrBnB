@@ -11,19 +11,8 @@
 
 
 <p><%= @poney.description %></p>
-<img src=<%= @poney.profile_pic_url alt="">
+<img src=<%= @poney.profile_pic_url %>alt="">
 <%= cl_image_tag @poney.photo.key, alt: "Some picture", height: 300, width: 400%>
-
-
-
-<% if current_user.id != @poney.user_id %>
-  <%= link_to "Book this poney",  new_poney_booking_path(@poney) %>
-<% else %>
-  <%= link_to "Edit this poney",  edit_poney_path(@poney) %>
-<% end %>
-           <p>🤔 <%= @poney.description %></p>
-    </div>
-  </div>
 
 
   <%# here is a button that allows a user who is
@@ -38,6 +27,4 @@
       <% end %>
   </div>
   </div>
-
-
 </div>

@@ -1,7 +1,7 @@
-<h1>Here are all the ponies you own :</h1>
+<p class="indiv-card-title" style=" margin-top:30px;">Here are all the Poneys you own :</p>
 
-<ul>
+<div class="poney-cards">
   <% @myponies.each do |p| %>
-    <li><%= p.name %>, <%= p.color %></li>
+    <div style="font-size:20px; text-align:center;  margin-top:30px; ">➜ <%= p.name %>, <%= p.color %></p></div>
     <% end %>
-</ul>
+</div>
