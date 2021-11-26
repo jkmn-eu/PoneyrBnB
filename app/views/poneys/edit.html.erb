@@ -1,8 +1,8 @@
 <h1>Modifie moi ce poneeey si il te dépleeey...</h1>
 
 <%= simple_form_for @poney, :url => poney_path, method: :patch do |f| %>
-  <%= f.input :name, label: 'Your poney name please', placeholder: 'Please name your cutty poney', error: 'Name is mandatory, please specify one' %>
-  <%= f.input :nature, collection: ['gentil', 'joli', 'éclaté'] %>
+  <%= f.input :name, label: 'Your poney name please', placeholder: 'Please name your cutty poney' %>
+  <%= f.input :nature, collection: ['gentil', 'joli', 'éclaté'], include_blank: false %>
   <%= f.input :color, placeholder: 'poney color please' %>
   <%= f.input :price_per_diem, placeholder: 'A number please for rate per day' %>
   <%= f.input :height, placeholder: 'how big is this tiny horse ?' %>

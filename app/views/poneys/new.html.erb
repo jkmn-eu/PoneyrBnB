@@ -2,7 +2,7 @@
 
 <%= simple_form_for @poney, method: :post do |f| %>
   <%= f.input :name, label: 'Your poney name please', error: 'Name is mandatory, please specify one' %>
-  <%= f.input :nature, collection: ['gentil', 'joli', 'éclaté'] %>
+  <%= f.input :nature, collection: ['gentil', 'joli', 'éclaté'], include_blank: false %>
   <%= f.input :color, placeholder: 'poney color please' %>
   <%= f.input :price_per_diem, placeholder: 'A number please for rate per day' %>
   <%= f.input :height, placeholder: 'how big is this tiny horse ?' %>
