@@ -2,11 +2,11 @@
 
 <div class="reservation-box indiv-card-text">
   <% if @user.id != @poney.user_id %>
-    <p>Poney's location : <%= @owner.address %></p>
+    <p>📍<strong> Poney's location :</strong> <%= @owner.address %></p>
     <%# maybe we can add a map here and show the shortest itinerary from user's address to its booking's location %>
   <div class="indiv-card-text">
-    <p>- Poney type: <%= @poney.nature.capitalize %></p>
-    <p>- SuperPower: <%= @poney.special_power.capitalize %></p>
+    <p>🐴 <strong> Poney type:</strong> <%= @poney.nature.capitalize %></p>
+    <p>✨<strong> SuperPower:</strong> <%= @poney.special_power.capitalize %></p>
   </div>
 </div>
   <div class="confirm-booking">
